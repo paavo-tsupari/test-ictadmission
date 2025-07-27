@@ -1,7 +1,6 @@
 app = 'test-ictadmission'
 primary_region = 'arn'
 
-[build]
 
 [http_service]
   internal_port = 80
