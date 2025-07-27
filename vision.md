@@ -11,3 +11,21 @@ Tiimi:
   <li>User experience (UX)</li>
   <li>Sckum master (SM)</li>
 </ul>
+
+Keskeiset ominaisuudet:
+<ul>
+  <li>Selkeä UI</li>
+  <li>Luotettava</li>
+  <li>Automaattisesti pävittyvä lista</li>
+  <li>Uusien kirjausten lisäys ja poistaminen</li>
+  <li>Löydettävissä julkisesta netistä</li>
+</ul>
+
+Lisäominaisuudet (myöhemmin/jos aikaa jää yli):
+<ul>
+  <li>Kartta, jossa näkyy koordinaattipisteet markkereina</li>
+  <li>Kellonajan tarkempi valitseminen</li>
+</ul>
+
+Proof of concept
+Valmis sovellus on tarkoitus saada mukaan sotaharjoituksiin. Sotaharjoituksissa voisimme nähdä kannattaako sovellusta kehittää jatkossa. 
