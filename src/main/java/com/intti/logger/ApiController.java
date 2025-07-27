@@ -88,6 +88,6 @@ public class ApiController {
         }
         System.out.println(title);
         this.EntityRepository.save(newEntry);
-        return("redirect:/");
+        return("index");
     }
 }
