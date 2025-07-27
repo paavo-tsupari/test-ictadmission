@@ -23,5 +23,5 @@ primary_region = 'arn'
   memory_mb = 2048
 
 [mounts]
-  source = "data"
+  source = "datavol"
   destination = "/data"
