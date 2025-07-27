@@ -44,7 +44,7 @@ function renderTable(data) {
 }
 
 async function fetchData() {
-    const res = await fetch("https://ict-project.fly.dev/entries");
+    const res = await fetch("https://test-ictadmission.fly.dev/entries");
     let data = await res.json();
     updateTime();
     renderTable(data);
@@ -79,7 +79,7 @@ function renderMarkers(data) {
 
 
 function deleteRow(data){
-    const deleted = fetch("https://ict-project.fly.dev/entries/"+data, {
+    const deleted = fetch("https://test-ictadmission.fly.dev/entries/"+data, {
         method: "DELETE"
     });
     fetchData();
