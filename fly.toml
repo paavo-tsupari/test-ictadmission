@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for ict-project on 2025-07-26T10:34:29Z
+# fly.toml app configuration file generated for test-ictadmission on 2025-07-27T16:21:27Z
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'ict-project'
+app = 'test-ictadmission'
 primary_region = 'arn'
 
 [build]
@@ -21,7 +21,3 @@ primary_region = 'arn'
   cpu_kind = 'shared'
   cpus = 4
   memory_mb = 2048
-
-[mounts]
-  source = "datavol"
-  destination = "/data"
