@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fi">
+    <head>
+        <meta charset="UTF-8">
+        <title>Unit Logbook</title>
+        <link rel="stylesheet" href="styles.css" >
+        <link rel="stylesheet" href="leaflet/leaflet.css" />
+    </head>
+    <body>
+        <div class="logo-bar">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Suomen_Puolustusvoimien_tornileijona.svg" alt="PV logo">
+            <h2>Yksikön Lokikirja</h2>
+        </div>
+        <div class="centered">
+            <div class="centered_flex">
+                <h3>Lisää uusi tapahtuma</h3>
+                <form id="addForm" method="POST" action="https://ict-project.fly.dev/entries">
+                    <div class="flexformline" >
+                        <div>
+                            <input style="width: 300px" type="text" name="title" id="title" placeholder="Otsikko" required>
+
+                            <label>
+                                <input type="checkbox" id="nowCheckbox" name="isnow" onchange="toggleNow(this)">
+                                Nyt
+                            </label>
+                            <input type="datetime-local" name="time" id="datetimeInput" required>
+                        </div>
+                        
+                        <textarea style="resize: none;" rows="3" cols="40" name="body" id="body" placeholder="Kuvaus" required></textarea>
+                        <div>
+                            <input type="number" style="width: 120px" name="latitude" step="0.0001" id="lat" placeholder="Lat" >
+                            <input type="number" style="width: 120px" name="longitude" step="0.0001" id="lon" placeholder="Lon">
+                        </div>  
+                        <button type="submit">Lisää</button>
+ 
+                    </div>
+                </form>
+                <div style="width:631px">
+                    <table class="log-table" id="logTable">
+                        <thead>
+                            <tr>
+                                <th id="sortTime" style="width: 80px">Aika </th>
+                                <th style="width: 85px">Otsikko</th>
+                                <th style="width: 165px">Kuvaus</th>
+                                <th style="width: 40px">Lat</th>
+                                <th style="width: 41px">Lon</th>
+                                <th style="width: 40px">Poista</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="map_container">
+                <div style="height: 500px; width: 500px;" id="map"></div>
+            </div>
+        </div>
+        <script src="leaflet/leaflet-src.js"></script>
+        <script src="main.js" defer></script>
+        <script>
+            window.map = L.map('map',{            
+                    dragging: false,
+                    scrollWheelZoom: false,
+                    doubleClickZoom: false,
+                    boxZoom: false,
+                    keyboard: false,
+                    zoomControl: false, // Piilottaa + ja - nappulat
+                    tap: false
+            }).setView([1, 1], 0);;
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+                attribution: '© OpenStreetMap'
+
+            }).addTo(window.map);
+            window.markers = L.layerGroup().addTo(window.map);
+        </script>
+    </body>
+</html>
