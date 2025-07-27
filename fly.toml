@@ -12,11 +12,10 @@ primary_region = 'arn'
   processes = ['app']
 
 [[vm]]
-  memory = '1gb'
   cpu_kind = 'shared'
   cpus = 4
   memory_mb = 2048
 
-[mounts]
+[[mounts]]
   source = "datavol"
   destination = "/data"
