@@ -3,8 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <title>Unit Logbook</title>
-        <link rel="stylesheet" href="styles.css" >
-        <link rel="stylesheet" href="leaflet/leaflet.css" />
+        <link rel="stylesheet" href="/css/styles.css" >
+        <link rel="stylesheet" href="/leaflet/leaflet.css" />
     </head>
     <body>
         <div class="logo-bar">
@@ -14,7 +14,7 @@
         <div class="centered">
             <div class="centered_flex">
                 <h3>Lisää uusi tapahtuma</h3>
-                <form id="addForm" method="POST" action="https://ict-project.fly.dev/entries">
+                <form id="addForm" method="POST" action="/entries">
                     <div class="flexformline" >
                         <div>
                             <input style="width: 300px" type="text" name="title" id="title" placeholder="Otsikko" required>
@@ -55,8 +55,8 @@
                 <div style="height: 500px; width: 500px;" id="map"></div>
             </div>
         </div>
-        <script src="leaflet/leaflet-src.js"></script>
-        <script src="main.js" defer></script>
+        <script src="/leaflet/leaflet-src.js"></script>
+        <script src="/javascript/main.js" defer></script>
         <script>
             window.map = L.map('map',{            
                     dragging: false,
