@@ -1,2 +1,2 @@
-# test-ictadmission
-puolustusvoimien ict-varusmies kokeen palautus
+# ict-project
+puolustusvoimien ict-varusmies koe
